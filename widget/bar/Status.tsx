@@ -8,6 +8,7 @@ export function Clock() {
 
 	return <box
 		className="Barlock"
+		heightRequest={40}
 		onDestroy={() => time.drop()}
 		halign={Gtk.Align.CENTER}
 		valign={Gtk.Align.CENTER}
@@ -19,8 +20,14 @@ export function Clock() {
 export function Bat() {
 	const bat = Battery.get_default();
 
-	return <box className="Bartery" tooltipText="Battery Percentage">
+	return <box
+		vertical
+		heightRequest={40}
+		className="Bartery"
+		tooltipText="Battery Percentage"
+	>
 		<circularprogress
+			heightRequest={40}
 			value={bind(bat, "percentage")}
 			startAt={0.75}
 			endAt={0.75}

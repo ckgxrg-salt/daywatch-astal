@@ -3,9 +3,8 @@
 
 .Buttons {
   button {
+    all: unset;
     font-size: 96px;
-    min-width: 100px;
-    min-height: 100px;
     margin: 10px 10px 10px 10px;
     border-radius: 3px;
   }

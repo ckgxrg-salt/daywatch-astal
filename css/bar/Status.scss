@@ -4,7 +4,6 @@
 .Barlock {
   background-color: color.change(p.$green, $alpha: 0.5);
   border: solid color.change(p.$green, $alpha: 0.7) 3px;
-  min-height: 40px;
   margin: 0 5px 0 5px;
   border-radius: 3px;
 
@@ -17,13 +16,11 @@
 .Bartery {
   background-color: color.change(p.$red, $alpha: 0.5);
   border: solid color.change(p.$red, $alpha: 0.7) 3px;
-  min-height: 40px;
   margin: 0 5px 0 5px;
   border-radius: 3px;
 
   circularprogress {
     margin: 5px 5px 5px 10px;
-    min-height: 20px;
     font-size: 2px;
   }
 

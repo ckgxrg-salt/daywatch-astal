@@ -15,6 +15,8 @@ function Apps() {
 	return <button
 		className="Apps"
 		tooltipText="Application Launcher"
+		widthRequest={100}
+		heightRequest={100}
 		onClicked={() => {
 			execAsync("uwsm app -- rofi -show drun");
 		}}
@@ -27,6 +29,8 @@ function Power() {
 	return <button
 		className="Power"
 		tooltipText="Power Options"
+		widthRequest={100}
+		heightRequest={100}
 		onClicked={() => {
 			execAsync("uwsm app -- wlogout");
 		}}
@@ -38,6 +42,8 @@ function Power() {
 // Inhibits screenlocker
 function Coffee() {
 	return <button
+		widthRequest={100}
+		heightRequest={100}
 		setup={self => {
 			if (coffeeState.get()) {
 				self.set_class_name("CoffeeDrunk");

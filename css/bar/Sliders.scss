@@ -23,8 +23,6 @@
 
   .BarAudioIcon {
     all: unset;
-    min-width: 40px;
-    min-height: 40px;
     margin: 5px 0 5px 5px;
     background-color: color.change(p.$blue, $alpha: 0.5);
     border: solid color.change(p.$blue, $alpha: 0.7) 3px;
@@ -39,8 +37,6 @@
 
   .BarBrightIcon {
     all: unset;
-    min-width: 40px;
-    min-height: 40px;
     margin: 5px 0 5px 5px;
     background-color: color.change(p.$yellow, $alpha: 0.5);
     border: solid color.change(p.$yellow, $alpha: 0.7) 3px;

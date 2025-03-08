@@ -6,6 +6,8 @@ export default function Status() {
 	return <box
 		className="Status"
 		vertical
+		widthRequest={190}
+		heightRequest={140}
 	>
 		<Clock />
 		<Bat />
@@ -18,6 +20,8 @@ function Clock() {
 
 	return <box
 		className="Clock"
+		widthRequest={190}
+		heightRequest={80}
 		onDestroy={() => time.drop()}
 		halign={Gtk.Align.CENTER}
 		valign={Gtk.Align.CENTER}
@@ -29,7 +33,12 @@ function Clock() {
 function Bat() {
 	const bat = Battery.get_default();
 
-	return <box className="Battery" tooltipText="Battery Percentage">
+	return <box
+		className="Battery"
+		tooltipText="Battery Percentage"
+		widthRequest={90}
+		heightRequest={90}
+	>
 		<overlay>
 			<circularprogress
 				rounded

@@ -2,14 +2,11 @@
 @use "sass:color";
 
 .Workspaces {
-  min-height: 210px;
-  min-width: 800px;
   margin: 10px 10px 10px 10px;
   background-color: color.change(p.$light-gray-2, $alpha: 0.7);
 
   button {
     all: unset;
-    min-width: 200px;
     margin: 10px 10px 10px 10px;
     font-size: 24px;
     background-color: color.change(p.$blue, $alpha: 0.5);

@@ -23,6 +23,8 @@ export default function Dashboard(monitor: number) {
 		monitor={monitor}
 		exclusivity={Astal.Exclusivity.EXCLUSIVE}
 		visible={bind(focused).as(v => !v)}
+		widthRequest={1540}
+		heightRequest={420}
 		// Send cursor back to primary screen
 		setup={self => {
 			self.connect("touch-event", (_, event) => {

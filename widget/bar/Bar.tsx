@@ -10,7 +10,7 @@ import { Clock, Bat } from "./Status";
 import { focused } from "../../app";
 
 export default function Bar(monitor: number) {
-	const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
+	const { TOP, LEFT, BOTTOM } = Astal.WindowAnchor;
 
 	return <window
 		application={App}
@@ -20,17 +20,18 @@ export default function Bar(monitor: number) {
 		layer={Astal.Layer.TOP}
 		monitor={monitor}
 		exclusivity={Astal.Exclusivity.EXCLUSIVE}
-		anchor={TOP | LEFT | RIGHT}
+		anchor={TOP | LEFT | BOTTOM}
 		visible={bind(focused)}
+		heightRequest={40}
 	>
-		<centerbox className="BarContainer">
-			<box className="BarLeft" halign={Gtk.Align.START}>
+		<centerbox vertical className="BarContainer">
+			<box vertical className="BarTop" halign={Gtk.Align.START}>
 				<Return />
 				<Tea />
 				<Workspaces />
 			</box>
 			<box />
-			<box className="BarRight" halign={Gtk.Align.END}>
+			<box vertical className="BarBottom" halign={Gtk.Align.END}>
 				<Media />
 				<Sliders />
 				<Clock />

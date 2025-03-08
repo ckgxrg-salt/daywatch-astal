@@ -17,9 +17,14 @@ export default function Dock() {
 function SysTray() {
 	const tray = Tray.get_default();
 
-	return <box className="SysTray">
+	return <box
+		className="SysTray"
+		heightRequest={65}
+		widthRequest={715}
+	>
 		{bind(tray, "items").as(items => items.map(item => (
 			<menubutton
+				widthRequest={25}
 				tooltipMarkup={bind(item, "tooltipMarkup")}
 				usePopover={false}
 				actionGroup={bind(item, "actionGroup").as(ag => ["dbusmenu", ag])}
@@ -31,7 +36,12 @@ function SysTray() {
 }
 
 function Memory() {
-	return <box className="Memory" tooltipText="Memory Usage">
+	return <box
+		className="Memory"
+		tooltipText="Memory Usage"
+		heightRequest={65}
+		widthRequest={85}
+	>
 		<icon icon="drive-virtual" />
 		<button
 			onClicked={() => {

@@ -13,6 +13,8 @@ export default function MediaServices() {
 
 function Cava() {
 	return <button
+		widthRequest={100}
+		heightRequest={50}
 		setup={self => {
 			if (cavaState.get()) {
 				self.set_class_name("CavaActive");
@@ -41,6 +43,8 @@ function Cava() {
 
 function MPD() {
 	return <button
+		widthRequest={100}
+		heightRequest={50}
 		setup={self => {
 			if (mpdState.get()) {
 				self.set_class_name("MPDActive");

@@ -8,6 +8,8 @@ export function Return() {
 	return <button
 		className="Return"
 		tooltipText="Return to normal layout"
+		widthRequest={64}
+		heightRequest={32}
 		onClicked={() => {
 			exec(["notify-send", "-i", "monitor", "Astal", "Exited Focused Mode.\nWindows are sent back to the primary screen."])
 			focused.set(false);
@@ -20,6 +22,8 @@ export function Return() {
 
 export function Tea() {
 	return <button
+		widthRequest={64}
+		heightRequest={32}
 		setup={self => {
 			if (coffeeState.get()) {
 				self.set_class_name("TeaDrunk");

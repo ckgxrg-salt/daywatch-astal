@@ -19,6 +19,8 @@ function Volume() {
 	return <box>
 		<button
 			className="BarAudioIcon"
+			widthRequest={40}
+			heightRequest={40}
 			onClicked={() => showVol.set(!showVol.get())}
 		>
 			<icon icon={bind(speaker, "volumeIcon")} />
@@ -44,6 +46,8 @@ function Bright() {
 	return <box>
 		<button
 			className="BarBrightIcon"
+			widthRequest={40}
+			heightRequest={40}
 			onClicked={() => showBrt.set(!showBrt.get())}
 		>
 			<icon

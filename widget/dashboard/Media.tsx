@@ -5,11 +5,21 @@ import { bind } from "astal";
 import { activePlayer, nextPlayer, prevPlayer, mapPlayers, lengthStr } from "../../util/mpris";
 
 export default function Media() {
-	return <box vertical className="Media">
+	return <box
+		vertical
+		className="Media"
+		widthRequest={380}
+	>
 		{Switchers()}
 		{bind(activePlayer).as(player => {
 			if (player === undefined) {
-				return <label className="NotFound">No Players Found</label>;
+				return <label
+					className="NotFound"
+					widthRequest={420}
+					heightRequest={200}
+				>
+					No Players Found
+				</label>;
 			} else {
 				return <PlayerControl player={player} />;
 			}
@@ -22,7 +32,11 @@ function Switchers() {
 		<button tooltipText="Previous Player" onClicked={() => prevPlayer()}>
 			<icon icon="media-skip-backward-symbolic" />
 		</button>
-		<label truncate label={bind(activePlayer).as(player => mapPlayers(player))} />
+		<label
+			truncate
+			widthRequest={300}
+			label={bind(activePlayer).as(player => mapPlayers(player))}
+		/>
 		<button tooltipText="Next Player" onClicked={() => nextPlayer()}>
 			<icon icon="media-skip-forward-symbolic" />
 		</button>
@@ -39,7 +53,7 @@ function PlayerControl({ player }: { player: Mpris.Player }) {
 
 	return <box className="MediaPlayer" vertical>
 		<box>
-			<box className="CoverArt" css={coverArt} />
+			<box className="CoverArt" css={coverArt} widthRequest={120} heightRequest={120} />
 			<box vertical valign={CENTER} className="Title">
 				<label truncate maxWidthChars={20} halign={START} label={title} tooltipText={title} />
 				<label halign={START} valign={START} wrap label={artist} tooltipText={artist} />
@@ -51,7 +65,11 @@ function PlayerControl({ player }: { player: Mpris.Player }) {
 			onDragged={({ value }) => player.position = value * player.length}
 			value={position}
 		/>
-		<centerbox className="Actions">
+		<centerbox
+			className="Actions"
+			widthRequest={400}
+			heightRequest={50}
+		>
 			<label
 				className="Position"
 				halign={START}

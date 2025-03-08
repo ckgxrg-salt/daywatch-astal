@@ -6,10 +6,14 @@ const quote = Variable("");
 export default function Quote() {
 	quote.set(exec("fortune"));
 
-	return <box className="QuoteContainer"
-		halign={Gtk.Align.CENTER}>
+	return <box
+		className="QuoteContainer"
+		halign={Gtk.Align.CENTER}
+		heightRequest={130}
+	>
 		<label
 			className="Quote"
+			widthRequest={770}
 			halign={Gtk.Align.CENTER}
 			truncate
 			wrap
@@ -19,6 +23,7 @@ export default function Quote() {
 		/>
 		<button
 			className="Refresh"
+			widthRequest={50}
 			halign={Gtk.Align.END}
 			tooltipText="Refresh Quote"
 			onClicked={() => {

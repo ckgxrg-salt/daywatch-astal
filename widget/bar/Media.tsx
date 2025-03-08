@@ -6,6 +6,7 @@ import { activePlayer, nextPlayer, mapPlayersIcon, lengthStr } from "../../util/
 
 export default function Media() {
 	return <box
+		vertical
 		className="BarMedia"
 	>
 		<button className="BarTitle" onClicked={() => nextPlayer()}>

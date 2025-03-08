@@ -6,6 +6,8 @@ import { Gtk } from "astal/gtk3";
 export default function Sliders() {
 	return <box
 		className="Sliders"
+		widthRequest={180}
+		heightRequest={210}
 	>
 		<Volume />
 		<Bright />
