@@ -12,14 +12,44 @@
     border-radius: 15px;
   }
 
+  circularprogress {
+    font-size: 5px;
+    min-width: 96px;
+  }
+
   .Battery {
+    background-color: color.change(p.$red, $alpha: 0.5);
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+  }
+
+  .BatteryLow {
     background-color: color.change(p.$red, $alpha: 0.5);
     margin: 10px 10px 10px 10px;
     border-radius: 15px;
 
     circularprogress {
-      font-size: 5px;
-      min-width: 96px;
+      color: p.$fg-orange;
+    }
+  }
+
+  .BatteryCrit {
+    background-color: color.change(p.$red, $alpha: 0.5);
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+
+    circularprogress {
+      color: p.$fg-red;
+    }
+  }
+
+  .BatteryCharging {
+    background-color: color.change(p.$red, $alpha: 0.5);
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+
+    circularprogress {
+      color: p.$fg-cyan;
     }
   }
 }

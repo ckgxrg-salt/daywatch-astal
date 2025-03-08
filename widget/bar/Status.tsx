@@ -16,12 +16,20 @@ export function Clock() {
 	</box>;
 }
 
+function mapBatState(warn: Battery.WarningLevel, state: Battery.State) {
+	if (warn == Battery.WarningLevel.LOW) return "BarteryLow";
+	if (warn == Battery.WarningLevel.CRITICIAL) return "BarteryCrit";
+	if (state == Battery.State.CHARGING) return "BarteryCharging";
+	if (state == Battery.State.FULLY_CHARGED) return "BarteryCharging";
+	return "Bartery";
+}
 export function Bat() {
 	const bat = Battery.get_default();
+	const className = Variable.derive([bind(bat, "warningLevel"), bind(bat, "state")], (w, s) => mapBatState(w, s));
 
 	return <box
 		vertical
-		className="Bartery"
+		className={className()}
 		tooltipText="Battery Percentage"
 	>
 		<circularprogress

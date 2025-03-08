@@ -30,11 +30,19 @@ function Clock() {
 	</box>;
 }
 
+function mapBatState(warn: Battery.WarningLevel, state: Battery.State) {
+	if (warn == Battery.WarningLevel.LOW) return "BatteryLow";
+	if (warn == Battery.WarningLevel.CRITICIAL) return "BatteryCrit";
+	if (state == Battery.State.CHARGING) return "BatteryCharging";
+	if (state == Battery.State.FULLY_CHARGED) return "BatteryCharging";
+	return "Battery";
+}
 function Bat() {
 	const bat = Battery.get_default();
+	const className = Variable.derive([bind(bat, "warningLevel"), bind(bat, "state")], (w, s) => mapBatState(w, s));
 
 	return <box
-		className="Battery"
+		className={className()}
 		tooltipText="Battery Percentage"
 		widthRequest={90}
 		heightRequest={90}
