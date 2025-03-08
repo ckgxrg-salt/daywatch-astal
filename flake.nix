@@ -25,6 +25,8 @@
       };
     in
     {
+      packages.${system}.default = import ./package.nix { inherit pkgs ags; };
+
       devShells.${system}.default = pkgs.mkShell {
         name = "astal-dev";
 
