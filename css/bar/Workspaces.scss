@@ -2,15 +2,15 @@
 @use "sass:color";
 
 .Barkspaces {
-  margin: 0 5px 0 15px;
+  margin: 5px 0 15px 0;
   background-color: color.change(p.$light-gray-2, $alpha: 0.5);
   border: solid color.change(p.$light-gray-2, $alpha: 0.7) 3px;
   border-radius: 3px;
-  padding: 0 5px 0 5px;
+  padding: 5px 0 5px 0;
 
   button {
     all: unset;
-    margin: 10px 5px 10px 5px;
+    margin: 5px 10px 5px 10px;
     background-color: color.change(p.$blue, $alpha: 0.5);
     border-radius: 10px;
 

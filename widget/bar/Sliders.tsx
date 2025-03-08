@@ -5,6 +5,7 @@ import { Gtk } from "astal/gtk3";
 
 export default function Sliders() {
 	return <box
+		vertical
 		className="BarSliders"
 	>
 		<Volume />
@@ -16,7 +17,20 @@ const showVol = Variable(false);
 function Volume() {
 	const speaker = Wp.get_default()?.audio.defaultSpeaker!
 
-	return <box>
+	return <box vertical>
+		<revealer
+			transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
+			revealChild={bind(showVol)}
+		>
+			<slider
+				vertical
+				inverted
+				className="BarAudio"
+				widthRequest={40}
+				onDragged={({ value }) => speaker.volume = value}
+				value={bind(speaker, "volume")}
+			/>
+		</revealer>
 		<button
 			className="BarAudioIcon"
 			widthRequest={40}
@@ -25,17 +39,6 @@ function Volume() {
 		>
 			<icon icon={bind(speaker, "volumeIcon")} />
 		</button>
-		<revealer
-			transitionType={Gtk.RevealerTransitionType.SLIDE_LEFT}
-			revealChild={bind(showVol)}
-		>
-			<slider
-				className="BarAudio"
-				halign={Gtk.Align.CENTER}
-				onDragged={({ value }) => speaker.volume = value}
-				value={bind(speaker, "volume")}
-			/>
-		</revealer>
 	</box>;
 }
 
@@ -43,7 +46,20 @@ const showBrt = Variable(false);
 function Bright() {
 	const brightness = Brightness.get_default();
 
-	return <box>
+	return <box vertical>
+		<revealer
+			transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
+			revealChild={bind(showBrt)}
+		>
+			<slider
+				vertical
+				inverted
+				className="BarBright"
+				widthRequest={40}
+				onDragged={({ value }) => brightness.screen = value}
+				value={bind(brightness, "screen")}
+			/>
+		</revealer>
 		<button
 			className="BarBrightIcon"
 			widthRequest={40}
@@ -54,16 +70,5 @@ function Bright() {
 				icon="weather-clear"
 			/>
 		</button>
-		<revealer
-			transitionType={Gtk.RevealerTransitionType.SLIDE_LEFT}
-			revealChild={bind(showBrt)}
-		>
-			<slider
-				className="BarBright"
-				halign={Gtk.Align.CENTER}
-				onDragged={({ value }) => brightness.screen = value}
-				value={bind(brightness, "screen")}
-			/>
-		</revealer>
 	</box>;
 }

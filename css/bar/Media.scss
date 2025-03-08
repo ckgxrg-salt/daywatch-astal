@@ -2,29 +2,24 @@
 @use "sass:color";
 
 .BarMedia {
-  margin: 0 5px 0 5px;
+  margin: 5px 0 5px 0;
 
   .BarTitle {
     background-color: color.change(p.$light-gray-1, $alpha: 0.5);
     border: solid color.change(p.$light-gray-1, $alpha: 0.7) 3px;
-    font-size: 16px;
-    border-right: none;
+    font-size: 24px;
+    border-bottom: none;
     border-radius: 3px;
   }
 
   .BarPlayer {
     background-color: color.change(p.$light-gray-1, $alpha: 0.5);
     border: solid color.change(p.$light-gray-1, $alpha: 0.7) 3px;
-    border-left: none;
+    border-top: none;
     border-radius: 3px;
-
-    .Title {
-      font-size: 16px;
-    }
 
     .PlayPause {
       all: unset;
-      min-width: 40px;
       margin: 5px 5px 5px 5px;
       background-color: color.change(p.$light-gray-2, $alpha: 0.5);
       border-radius: 3px;
@@ -32,24 +27,6 @@
       &:hover {
         background-color: color.change(p.$blue, $alpha: 0.9);
       }
-    }
-  }
-
-  .Progress {
-    slider {
-      all: unset;
-    }
-
-    trough {
-      min-width: 100px;
-      min-height: 20px;
-      border-radius: 14px;
-    }
-
-    highlight {
-      all: unset;
-      border-radius: 14px;
-      background-color: color.change(p.$fg-blue, $alpha: 0.5);
     }
   }
 

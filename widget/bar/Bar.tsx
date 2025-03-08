@@ -22,16 +22,16 @@ export default function Bar(monitor: number) {
 		exclusivity={Astal.Exclusivity.EXCLUSIVE}
 		anchor={TOP | LEFT | BOTTOM}
 		visible={bind(focused)}
-		heightRequest={40}
+		widthRequest={50}
 	>
 		<centerbox vertical className="BarContainer">
-			<box vertical className="BarTop" halign={Gtk.Align.START}>
+			<box vertical className="BarTop" valign={Gtk.Align.START}>
 				<Return />
 				<Tea />
 				<Workspaces />
 			</box>
 			<box />
-			<box vertical className="BarBottom" halign={Gtk.Align.END}>
+			<box vertical className="BarBottom" valign={Gtk.Align.END}>
 				<Media />
 				<Sliders />
 				<Clock />

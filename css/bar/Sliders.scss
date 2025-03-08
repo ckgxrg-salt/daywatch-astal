@@ -2,17 +2,18 @@
 @use "sass:color";
 
 .BarSliders {
-  margin: 0 5px 0 5px;
+  margin: 5px 0 5px 0;
   border-radius: 3px;
 
   slider {
     all: unset;
+    min-width: 20px;
   }
 
   trough {
     margin: unset;
-    min-width: 150px;
-    min-height: 20px;
+    min-height: 100px;
+    min-width: 20px;
     border-radius: 14px;
   }
 
@@ -23,7 +24,7 @@
 
   .BarAudioIcon {
     all: unset;
-    margin: 5px 0 5px 5px;
+    margin: 0 0 5px 0;
     background-color: color.change(p.$blue, $alpha: 0.5);
     border: solid color.change(p.$blue, $alpha: 0.7) 3px;
     border-radius: 3px;
@@ -37,7 +38,7 @@
 
   .BarBrightIcon {
     all: unset;
-    margin: 5px 0 5px 5px;
+    margin: 0 0 5px 0;
     background-color: color.change(p.$yellow, $alpha: 0.5);
     border: solid color.change(p.$yellow, $alpha: 0.7) 3px;
     border-radius: 3px;
@@ -52,8 +53,8 @@
   .BarAudio {
     background-color: color.change(p.$blue, $alpha: 0.5);
     border: solid color.change(p.$blue, $alpha: 0.7) 3px;
-    border-left: none;
-    margin: 5px 5px 5px 0;
+    border-bottom: none;
+    margin: 5px 0 0 0;
 
     highlight {
       background-color: color.change(p.$white, $alpha: 0.8);
@@ -63,8 +64,8 @@
   .BarBright {
     background-color: color.change(p.$yellow, $alpha: 0.5);
     border: solid color.change(p.$yellow, $alpha: 0.7) 3px;
-    border-left: none;
-    margin: 5px 5px 5px 0;
+    border-bottom: none;
+    margin: 5px 0 0 0;
 
     highlight {
       background-color: color.change(p.$white, $alpha: 0.8);

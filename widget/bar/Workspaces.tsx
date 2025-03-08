@@ -6,7 +6,7 @@ export default function Workspaces() {
 	return <box
 		className="Barkspaces"
 		vertical
-		heightRequest={40}
+		widthRequest={40}
 	>
 		{bind(hypr, "workspaces").as(wss => wss
 			.filter(ws => ws.id >= 0)
@@ -15,7 +15,7 @@ export default function Workspaces() {
 				<button
 					className={bind(hypr, "focusedWorkspace").as(fw =>
 						ws === fw ? "focused" : "")}
-					widthRequest={20}
+					widthRequest={30}
 					heightRequest={30}
 					onClicked={() => ws.focus()}>
 				</button>
