@@ -9,6 +9,11 @@
     border: solid color.change(p.$light-gray-2, $alpha: 0.7) 10px;
     border-bottom-width: 0;
     border-radius: 3px;
+
+    button {
+      all: unset;
+      background-color: color.change(p.$gray, $alpha: 0.7);
+    }
   }
 
   .NotFound {
@@ -27,7 +32,7 @@
     .CoverArt {
       margin: 10px 10px 10px 10px;
       background-color: color.change(p.$gray, $alpha: 0.5);
-      background-size: 120px 120px;
+      background-size: cover;
     }
 
     .Progress {
@@ -51,6 +56,11 @@
 
     .Actions {
       margin: 10px 10px 10px 10px;
+
+      button {
+        all: unset;
+        background-color: color.change(p.$light-gray-2, $alpha: 0.7);
+      }
     }
   }
 }

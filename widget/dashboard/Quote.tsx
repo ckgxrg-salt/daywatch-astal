@@ -9,7 +9,7 @@ export default function Quote() {
 	return <box
 		className="QuoteContainer"
 		halign={Gtk.Align.CENTER}
-		heightRequest={130}
+		heightRequest={150}
 	>
 		<label
 			className="Quote"

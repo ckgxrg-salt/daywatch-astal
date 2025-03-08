@@ -5,8 +5,8 @@ export default function Workspaces() {
 	const hypr = Hyprland.get_default();
 	return <box
 		className="Workspaces"
-		widthRequest={800}
-		heightRequest={210}
+		widthRequest={825}
+		heightRequest={225}
 	>
 		{bind(hypr, "workspaces").as(wss => wss
 			.filter(ws => ws.id >= 0)

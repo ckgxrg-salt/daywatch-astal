@@ -46,6 +46,7 @@ function Bat() {
 				startAt={0.75}
 				endAt={0.75}
 			>
+				<icon />
 			</circularprogress>
 			<box vertical valign={Gtk.Align.CENTER}>
 				<icon

@@ -19,12 +19,12 @@ function SysTray() {
 
 	return <box
 		className="SysTray"
-		heightRequest={65}
-		widthRequest={715}
+		heightRequest={75}
+		widthRequest={750}
 	>
 		{bind(tray, "items").as(items => items.map(item => (
 			<menubutton
-				widthRequest={25}
+				widthRequest={50}
 				tooltipMarkup={bind(item, "tooltipMarkup")}
 				usePopover={false}
 				actionGroup={bind(item, "actionGroup").as(ag => ["dbusmenu", ag])}
@@ -39,8 +39,8 @@ function Memory() {
 	return <box
 		className="Memory"
 		tooltipText="Memory Usage"
-		heightRequest={65}
-		widthRequest={85}
+		heightRequest={75}
+		widthRequest={75}
 	>
 		<icon icon="drive-virtual" />
 		<button

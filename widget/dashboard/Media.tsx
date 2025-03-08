@@ -3,6 +3,7 @@ import Mpris from "gi://AstalMpris";
 import { bind } from "astal";
 
 import { activePlayer, nextPlayer, prevPlayer, mapPlayers, lengthStr } from "../../util/mpris";
+import Gsk40 from "gi://Gsk";
 
 export default function Media() {
 	return <box
@@ -29,7 +30,10 @@ export default function Media() {
 
 function Switchers() {
 	return <centerbox className="Switchers">
-		<button tooltipText="Previous Player" onClicked={() => prevPlayer()}>
+		<button
+			tooltipText="Previous Player"
+			onClicked={() => prevPlayer()}
+		>
 			<icon icon="media-skip-backward-symbolic" />
 		</button>
 		<label
@@ -79,17 +83,26 @@ function PlayerControl({ player }: { player: Mpris.Player }) {
 			<box>
 				<button
 					onClicked={() => player.previous()}
-					visible={bind(player, "canGoPrevious")}>
+					visible={bind(player, "canGoPrevious")}
+					widthRequest={40}
+					heightRequest={30}
+				>
 					<icon icon="media-skip-backward-symbolic" />
 				</button>
 				<button
 					onClicked={() => player.play_pause()}
-					visible={bind(player, "canControl")}>
+					visible={bind(player, "canControl")}
+					widthRequest={40}
+					heightRequest={30}
+				>
 					<icon icon={playIcon} />
 				</button>
 				<button
 					onClicked={() => player.next()}
-					visible={bind(player, "canGoNext")}>
+					visible={bind(player, "canGoNext")}
+					widthRequest={40}
+					heightRequest={30}
+				>
 					<icon icon="media-skip-forward-symbolic" />
 				</button>
 			</box>
