@@ -1,0 +1,34 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.MediaServices {
+  button {
+    font-size: 48px;
+    min-width: 100px;
+    min-height: 50px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 3px;
+  }
+
+  .CavaInactive {
+    color: color.change(p.$light-gray-1, $alpha: 0.3);
+    background-color: color.change(p.$light-gray-1, $alpha: 0.3);
+    border: solid color.change(p.$light-gray-1, $alpha: 0.5) 10px;
+  }
+
+  .CavaActive {
+    background-color: color.change(p.$fg-lime, $alpha: 0.5);
+    border: solid color.change(p.$fg-lime, $alpha: 0.7) 10px;
+  }
+
+  .MPDInactive {
+    color: color.change(p.$light-gray-2, $alpha: 0.3);
+    background-color: color.change(p.$light-gray-2, $alpha: 0.3);
+    border: solid color.change(p.$light-gray-2, $alpha: 0.5) 10px;
+  }
+
+  .MPDActive {
+    background-color: color.change(p.$fg-purple, $alpha: 0.5);
+    border: solid color.change(p.$fg-purple, $alpha: 0.7) 10px;
+  }
+}

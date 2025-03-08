@@ -1,0 +1,28 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.Barkspaces {
+  min-height: 40px;
+  margin: 0 5px 0 15px;
+  background-color: color.change(p.$light-gray-2, $alpha: 0.5);
+  border: solid color.change(p.$light-gray-2, $alpha: 0.7) 3px;
+  border-radius: 3px;
+  padding: 0 5px 0 5px;
+
+  button {
+    all: unset;
+    min-height: 20px;
+    min-width: 30px;
+    margin: 10px 5px 10px 5px;
+    background-color: color.change(p.$blue, $alpha: 0.5);
+    border-radius: 10px;
+
+    &:active {
+      background-color: color.change(p.$blue, $alpha: 0.9);
+    }
+  }
+
+  .focused {
+    background-color: color.change(p.$blue, $alpha: 0.9);
+  }
+}

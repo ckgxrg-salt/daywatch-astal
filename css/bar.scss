@@ -1,0 +1,13 @@
+@use "./bar/Buttons";
+@use "./bar/Workspaces";
+@use "./bar/Media";
+@use "./bar/Sliders";
+@use "./bar/Status";
+
+window.Bar {
+  min-height: 40px;
+
+  .BarContainer {
+    background: transparent;
+  }
+}

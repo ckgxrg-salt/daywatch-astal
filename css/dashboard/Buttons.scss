@@ -1,0 +1,32 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.Buttons {
+  button {
+    font-size: 96px;
+    min-width: 100px;
+    min-height: 100px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 3px;
+  }
+
+  .Apps {
+    background-color: color.change(p.$light-gray-1, $alpha: 0.5);
+    border: solid color.change(p.$light-gray-1, $alpha: 0.7) 10px;
+  }
+
+  .Power {
+    background-color: color.change(p.$red, $alpha: 0.5);
+    border: solid color.change(p.$red, $alpha: 0.7) 10px;
+  }
+
+  .CoffeeZzz {
+    background-color: color.change(p.$green, $alpha: 0.5);
+    border: solid color.change(p.$green, $alpha: 0.7) 10px;
+  }
+
+  .CoffeeDrunk {
+    background-color: color.change(p.$yellow, $alpha: 0.5);
+    border: solid color.change(p.$yellow, $alpha: 0.7) 10px;
+  }
+}

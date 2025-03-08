@@ -1,0 +1,19 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.QuoteContainer {
+  min-width: 810px;
+  min-height: 130px;
+  background-color: color.change(p.$blue, $alpha: 0.5);
+  border: solid color.change(p.$blue, $alpha: 0.7) 10px;
+  border-radius: 3px;
+
+  .Quote {
+    min-width: 770px;
+  }
+
+  .Refresh {
+    all: unset;
+    min-width: 50px;
+  }
+}

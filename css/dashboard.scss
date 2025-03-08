@@ -1,0 +1,17 @@
+@use "./dashboard/Buttons";
+@use "./dashboard/Dock";
+@use "./dashboard/Media";
+@use "./dashboard/MediaServices";
+@use "./dashboard/Quote";
+@use "./dashboard/Sliders";
+@use "./dashboard/Status";
+@use "./dashboard/Workspaces";
+
+window.Dashboard {
+  .DashboardContainer {
+    background: transparent;
+
+    min-height: 420px;
+    min-width: 1540px;
+  }
+}

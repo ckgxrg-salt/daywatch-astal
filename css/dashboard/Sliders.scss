@@ -1,0 +1,46 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.Sliders {
+  min-width: 180px;
+  min-height: 210px;
+  margin: 10px 10px 10px 10px;
+  background-color: color.change(p.$light-gray-1, $alpha: 0.5);
+  border-radius: 3px;
+
+  slider {
+    all: unset;
+  }
+
+  trough {
+    margin: unset;
+    min-width: 90px;
+    min-height: 170px;
+    border-radius: 14px;
+  }
+
+  highlight {
+    all: unset;
+    border-radius: 14px;
+  }
+
+  .AudioSlider highlight {
+    background-color: color.change(p.$fg-cyan, $alpha: 0.3);
+  }
+
+  .BrightnessSlider highlight {
+    background-color: color.change(p.$fg-yellow, $alpha: 0.3);
+  }
+
+  .AudioIcon {
+    font-size: 48px;
+    margin-top: 50px;
+    color: color.change(p.$white, $alpha: 0.3);
+  }
+
+  .BrightnessIcon {
+    font-size: 48px;
+    margin-top: 50px;
+    color: color.change(p.$white, $alpha: 0.3);
+  }
+}

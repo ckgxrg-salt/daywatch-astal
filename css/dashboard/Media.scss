@@ -1,0 +1,67 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.Media {
+  min-width: 380px;
+  margin: 10px 10px 10px 10px;
+
+  .Switchers {
+    background-color: color.change(p.$light-gray-2, $alpha: 0.5);
+    border: solid color.change(p.$light-gray-2, $alpha: 0.7) 10px;
+    border-bottom-width: 0;
+    border-radius: 3px;
+
+    label {
+      min-width: 300px;
+    }
+  }
+
+  .NotFound {
+    min-width: 420px;
+    min-height: 200px;
+    background-color: color.change(p.$light-gray-1, $alpha: 0.5);
+    border: solid color.change(p.$light-gray-1, $alpha: 0.7) 10px;
+    border-top-width: 0;
+    border-radius: 3px;
+  }
+
+  .MediaPlayer {
+    background-color: color.change(p.$light-gray-1, $alpha: 0.5);
+    border: solid color.change(p.$light-gray-1, $alpha: 0.7) 10px;
+    border-top-width: 0;
+    border-radius: 3px;
+
+    .CoverArt {
+      min-width: 120px;
+      min-height: 120px;
+      margin: 10px 10px 10px 10px;
+      background-color: color.change(p.$gray, $alpha: 0.5);
+      background-size: 120px 120px;
+    }
+
+    .Progress {
+      margin: 10px 10px 0 10px;
+
+      slider {
+        all: unset;
+      }
+
+      trough {
+        min-height: 50px;
+        border-radius: 14px;
+      }
+
+      highlight {
+        all: unset;
+        border-radius: 14px;
+        background-color: color.change(p.$fg-blue, $alpha: 0.5);
+      }
+    }
+
+    .Actions {
+      min-width: 400px;
+      min-height: 50px;
+      margin: 10px 10px 10px 10px;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use "../palette" as p;
+@use "sass:color";
+
+.BarSliders {
+  margin: 0 5px 0 5px;
+  border-radius: 3px;
+
+  slider {
+    all: unset;
+  }
+
+  trough {
+    margin: unset;
+    min-width: 150px;
+    min-height: 20px;
+    border-radius: 14px;
+  }
+
+  highlight {
+    all: unset;
+    border-radius: 14px;
+  }
+
+  .BarAudioIcon {
+    all: unset;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 5px 0 5px 5px;
+    background-color: color.change(p.$blue, $alpha: 0.5);
+    border: solid color.change(p.$blue, $alpha: 0.7) 3px;
+    border-radius: 3px;
+    font-size: 24px;
+
+    &:hover,
+    &:active {
+      background-color: color.change(p.$blue, $alpha: 0.9);
+    }
+  }
+
+  .BarBrightIcon {
+    all: unset;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 5px 0 5px 5px;
+    background-color: color.change(p.$yellow, $alpha: 0.5);
+    border: solid color.change(p.$yellow, $alpha: 0.7) 3px;
+    border-radius: 3px;
+    font-size: 16px;
+
+    &:hover,
+    &:active {
+      background-color: color.change(p.$yellow, $alpha: 0.9);
+    }
+  }
+
+  .BarAudio {
+    background-color: color.change(p.$blue, $alpha: 0.5);
+    border: solid color.change(p.$blue, $alpha: 0.7) 3px;
+    border-left: none;
+    margin: 5px 5px 5px 0;
+
+    highlight {
+      background-color: color.change(p.$white, $alpha: 0.8);
+    }
+  }
+
+  .BarBright {
+    background-color: color.change(p.$yellow, $alpha: 0.5);
+    border: solid color.change(p.$yellow, $alpha: 0.7) 3px;
+    border-left: none;
+    margin: 5px 5px 5px 0;
+
+    highlight {
+      background-color: color.change(p.$white, $alpha: 0.8);
+    }
+  }
+}
