@@ -17,11 +17,11 @@ export function Clock() {
 }
 
 function mapBatState(warn: Battery.WarningLevel, state: Battery.State) {
-	if (warn == Battery.WarningLevel.LOW) return "BarteryLow";
-	if (warn == Battery.WarningLevel.CRITICIAL) return "BarteryCrit";
-	if (state == Battery.State.CHARGING) return "BarteryCharging";
-	if (state == Battery.State.FULLY_CHARGED) return "BarteryCharging";
-	return "Bartery";
+	if (warn == Battery.WarningLevel.LOW) return "ProgLow";
+	if (warn == Battery.WarningLevel.CRITICIAL) return "ProgCrit";
+	if (state == Battery.State.CHARGING) return "ProgCharging";
+	if (state == Battery.State.FULLY_CHARGED) return "ProgCharging";
+	return "Prog";
 }
 export function Bat() {
 	const bat = Battery.get_default();
@@ -29,10 +29,11 @@ export function Bat() {
 
 	return <box
 		vertical
-		className={className()}
+		className="Bartery"
 		tooltipText="Battery Percentage"
 	>
 		<circularprogress
+			className={className()}
 			value={bind(bat, "percentage")}
 			startAt={0.75}
 			endAt={0.75}

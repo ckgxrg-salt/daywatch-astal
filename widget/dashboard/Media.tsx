@@ -3,7 +3,6 @@ import Mpris from "gi://AstalMpris";
 import { bind } from "astal";
 
 import { activePlayer, nextPlayer, prevPlayer, mapPlayers, lengthStr } from "../../util/mpris";
-import Gsk40 from "gi://Gsk";
 
 export default function Media() {
 	return <box

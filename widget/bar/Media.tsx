@@ -13,7 +13,7 @@ export default function Media() {
 		<button
 			className="BarTitle"
 			onClicked={() => nextPlayer()}
-			tooltipText={bind(activePlayer).as(t => t?.get_title())}
+			tooltipText={bind(activePlayer).as(t => t?.get_title() || "")}
 		>
 			<icon icon={bind(activePlayer).as(player => mapPlayersIcon(player))} />
 		</button>

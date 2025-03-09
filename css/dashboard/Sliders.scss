@@ -2,10 +2,6 @@
 @use "sass:color";
 
 .Sliders {
-  margin: 10px 10px 10px 10px;
-  background-color: color.change(p.$light-gray-1, $alpha: 0.5);
-  border-radius: 3px;
-
   slider {
     all: unset;
   }
@@ -13,21 +9,33 @@
   trough {
     margin: unset;
     min-width: 90px;
-    min-height: 170px;
-    border-radius: 14px;
+    min-height: 190px;
+    border-radius: 3px;
   }
 
   highlight {
     all: unset;
-    border-radius: 14px;
+    border-radius: 3px;
   }
 
-  .AudioSlider highlight {
-    background-color: color.change(p.$fg-cyan, $alpha: 0.3);
+  .AudioSlider {
+    highlight {
+      background-color: color.change(p.$fg-cyan, $alpha: 0.3);
+    }
+
+    trough {
+      border: solid color.change(p.$blue, $alpha: 0.5) 5px;
+    }
   }
 
-  .BrightnessSlider highlight {
-    background-color: color.change(p.$fg-yellow, $alpha: 0.3);
+  .BrightnessSlider {
+    highlight {
+      background-color: color.change(p.$fg-yellow, $alpha: 0.3);
+    }
+
+    trough {
+      border: solid color.change(p.$yellow, $alpha: 0.5) 5px;
+    }
   }
 
   .AudioIcon {

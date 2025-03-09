@@ -4,9 +4,8 @@ import { Gtk } from "astal/gtk3";
 
 export default function Status() {
 	return <box
-		className="Status"
 		vertical
-		widthRequest={190}
+		widthRequest={230}
 		heightRequest={140}
 	>
 		<Clock />
@@ -20,35 +19,35 @@ function Clock() {
 
 	return <box
 		className="Clock"
-		widthRequest={190}
+		widthRequest={230}
 		heightRequest={80}
 		onDestroy={() => time.drop()}
-		halign={Gtk.Align.CENTER}
-		valign={Gtk.Align.CENTER}
 	>
-		{time()}
+		<label label={time()} />
 	</box>;
 }
 
 function mapBatState(warn: Battery.WarningLevel, state: Battery.State) {
-	if (warn == Battery.WarningLevel.LOW) return "BatteryLow";
-	if (warn == Battery.WarningLevel.CRITICIAL) return "BatteryCrit";
-	if (state == Battery.State.CHARGING) return "BatteryCharging";
-	if (state == Battery.State.FULLY_CHARGED) return "BatteryCharging";
-	return "Battery";
+	if (warn == Battery.WarningLevel.LOW) return "ProgLow";
+	if (warn == Battery.WarningLevel.CRITICIAL) return "ProgCrit";
+	if (state == Battery.State.CHARGING) return "ProgCharging";
+	if (state == Battery.State.FULLY_CHARGED) return "ProgCharging";
+	return "Prog";
 }
 function Bat() {
 	const bat = Battery.get_default();
 	const className = Variable.derive([bind(bat, "warningLevel"), bind(bat, "state")], (w, s) => mapBatState(w, s));
 
 	return <box
-		className={className()}
+		className="Battery"
 		tooltipText="Battery Percentage"
-		widthRequest={90}
-		heightRequest={90}
+		widthRequest={120}
+		heightRequest={120}
+		halign={Gtk.Align.CENTER}
 	>
 		<overlay>
 			<circularprogress
+				className={className()}
 				rounded
 				value={bind(bat, "percentage")}
 				startAt={0.75}

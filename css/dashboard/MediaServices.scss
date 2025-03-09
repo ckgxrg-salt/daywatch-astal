@@ -15,8 +15,8 @@
   }
 
   .CavaActive {
-    background-color: color.change(p.$fg-lime, $alpha: 0.5);
-    border: solid color.change(p.$fg-lime, $alpha: 0.7) 10px;
+    background-color: color.change(p.$purple, $alpha: 0.5);
+    border: solid color.change(p.$purple, $alpha: 0.7) 10px;
   }
 
   .MPDInactive {
@@ -26,7 +26,7 @@
   }
 
   .MPDActive {
-    background-color: color.change(p.$fg-purple, $alpha: 0.5);
-    border: solid color.change(p.$fg-purple, $alpha: 0.7) 10px;
+    background-color: color.change(p.$yellow, $alpha: 0.5);
+    border: solid color.change(p.$yellow, $alpha: 0.7) 10px;
   }
 }

@@ -29,52 +29,16 @@ circularprogress {
     font-size: 16px;
     margin-right: 5px;
   }
-}
 
-.BarteryLow {
-  background-color: color.change(p.$red, $alpha: 0.5);
-  border: solid color.change(p.$red, $alpha: 0.7) 3px;
-  margin: 5px 0 0 0;
-  border-radius: 3px;
-
-  label {
-    font-size: 16px;
-    margin-right: 5px;
-  }
-
-  circularprogress {
+  circularprogress.ProgLow {
     color: p.$fg-orange;
   }
-}
 
-.BarteryCrit {
-  background-color: color.change(p.$red, $alpha: 0.5);
-  border: solid color.change(p.$red, $alpha: 0.7) 3px;
-  margin: 5px 0 0 0;
-  border-radius: 3px;
-
-  label {
-    font-size: 16px;
-    margin-right: 5px;
-  }
-
-  circularprogress {
+  circularprogress.ProgCrit {
     color: p.$fg-red;
   }
-}
 
-.BarteryCharging {
-  background-color: color.change(p.$red, $alpha: 0.5);
-  border: solid color.change(p.$red, $alpha: 0.7) 3px;
-  margin: 5px 0 0 0;
-  border-radius: 3px;
-
-  label {
-    font-size: 16px;
-    margin-right: 5px;
-  }
-
-  circularprogress {
+  circularprogress.ProgCharging {
     color: p.$fg-cyan;
   }
 }
