@@ -4,7 +4,7 @@ I have a dual-screen model, so this setup consists a bottom dashboard and a bar.
 Normally the dashboard, which has more functions, would be displayed, but when a window is summoned at the bottom screen, the dashboard hides and the bar appears, maxmising space for the windows.   
 I made this using the beautiful everforest palette.   
 ## Screenshots
-Bottom dashboard
-![image](https://github.com/user-attachments/assets/5c97f423-6d7c-4dcf-8cf8-87c369cbe3f2)
-Top bar
-![image](https://github.com/user-attachments/assets/37e6536f-85ae-41f4-af31-bdda0314c6ec)
+### Bottom dashboard
+![image](https://github.com/user-attachments/assets/dccfb5ab-410f-4a1d-b424-56ca54018d6b)
+### Side bar
+![image](https://github.com/user-attachments/assets/9dba5548-9220-4cba-866d-ef34742f8520)
