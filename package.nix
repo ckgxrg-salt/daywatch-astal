@@ -12,14 +12,11 @@ ags.lib.bundle {
 
   extraPackages = with ags.packages.${pkgs.system}; [
     astal3
-    astal4
     io
     hyprland
     tray
-    cava
     mpris
     wireplumber
-    network
     battery
   ];
 }

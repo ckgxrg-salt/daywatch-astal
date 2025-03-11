@@ -34,14 +34,11 @@
           (ags.packages.${system}.default.override {
             extraPackages = with ags.packages.${system}; [
               astal3
-              astal4
               io
               hyprland
               tray
-              cava
               mpris
               wireplumber
-              network
               battery
             ];
           })

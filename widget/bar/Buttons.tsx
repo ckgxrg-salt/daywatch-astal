@@ -11,7 +11,7 @@ export function Return() {
 		heightRequest={64}
 		widthRequest={40}
 		onClicked={() => {
-			exec(["notify-send", "-i", "monitor", "Astal", "Exited Focused Mode.\nWindows are sent back to the primary screen."])
+			exec(["notify-send", "-i", "monitor", "Astal", "Exited Focus Mode.\nWindows are sent back to the primary screen."])
 			focused.set(false);
 			sendBack();
 		}}

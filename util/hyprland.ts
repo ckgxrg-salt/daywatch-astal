@@ -13,14 +13,14 @@ export function hyprInit() {
 		Dashboard(1);
 	})
 	hypr.connect("client-added", (_, client) => {
-		if (!focused.get() && client.get_monitor().get_name() == "DP-1" && client.get_class() != "alacritty-cava") {
-			exec(["notify-send", "-i", "laptop", "Astal", "Switched to Focused Mode.\nUse the Return button above to restore the dashboard."])
+		if (!focused.get() && client.get_monitor().get_name() == "DP-1" && !client.get_floating() && client.get_class() != "alacritty-cava") {
+			exec(["notify-send", "-i", "laptop", "Astal", "Switched to Focus Mode.\nUse the Return button above to restore the dashboard."])
 			focused.set(true);
 		}
 	})
 	hypr.connect("monitor-removed", (_, id) => {
 		if (id == 1 && focused.get()) {
-			exec(["notify-send", "-i", "monitor", "Astal", "Automatically Exited Focused Mode.\nFocused Mode is unsupported in suspension."])
+			exec(["notify-send", "-i", "monitor", "Astal", "Automatically Exited Focus Mode.\nFocused Mode is unsupported in suspension."])
 			focused.set(false);
 			sendBack();
 		}
