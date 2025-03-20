@@ -49,7 +49,8 @@ export function mapPlayers(original: Mpris.Player | undefined) {
 		case "MPD on localhost:6600": return "Music Player Daemon";
 		case "Mozilla floorp": return "Floorp";
 		case "bilibili": return "Bilibili";
-		default: return "MPRIS";
+		case undefined: return "MPRIS";
+		default: return original?.get_identity();
 	}
 }
 export function mapPlayersIcon(original: Mpris.Player | undefined) {
@@ -57,6 +58,8 @@ export function mapPlayersIcon(original: Mpris.Player | undefined) {
 		case "MPD on localhost:6600": return "mpd";
 		case "Mozilla floorp": return "floorp";
 		case "bilibili": return "io.github.msojocs.bilibili";
+		case "FreeTube": return "freetube";
+		case "Celluloid": return "celluloid";
 		default: return "multimedia-player";
 	}
 }
