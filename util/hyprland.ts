@@ -9,20 +9,15 @@ const hypr = Hyprland.get_default();
 
 // WM callbacks
 export function hyprInit() {
-	hypr.connect("monitor-added", () => {
-		Dashboard(1);
+	hypr.connect("monitor-added", (_, monitor) => {
+		if (monitor.get_name() == "DP-1") {
+			Dashboard();
+		}
 	})
 	hypr.connect("client-added", (_, client) => {
 		if (!focused.get() && client.get_monitor().get_name() == "DP-1" && !client.get_floating() && client.get_class() != "alacritty-cava") {
 			exec(["notify-send", "-i", "laptop", "Astal", "Switched to Focus Mode.\nUse the Return button above to restore the dashboard."])
 			focused.set(true);
-		}
-	})
-	hypr.connect("monitor-removed", (_, id) => {
-		if (id == 1 && focused.get()) {
-			exec(["notify-send", "-i", "monitor", "Astal", "Automatically Exited Focus Mode.\nFocused Mode is unsupported in suspension."])
-			focused.set(false);
-			sendBack();
 		}
 	})
 }

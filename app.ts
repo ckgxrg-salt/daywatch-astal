@@ -19,8 +19,8 @@ App.start({
 	main() {
 		mprisInit();
 		hyprInit();
-		Inhibitor(0);
-		Bar(0);
-		Dashboard(1);
+		Inhibitor();
+		Bar();
+		Dashboard();
 	},
 });

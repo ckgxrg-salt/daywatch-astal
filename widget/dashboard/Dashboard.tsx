@@ -13,14 +13,14 @@ import Workspaces from "./Workspaces";
 import { switchFocus } from "../../util/hyprland";
 import { focused } from "../../app";
 
-export default function Dashboard(monitor: number) {
+export default function Dashboard() {
 	return <window
 		application={App}
 		className="Dashboard"
 		name="astal-dashboard"
 		namespace="astal-dashboard"
 		layer={Astal.Layer.BOTTOM}
-		monitor={monitor}
+		monitor={1}
 		exclusivity={Astal.Exclusivity.EXCLUSIVE}
 		visible={bind(focused).as(v => !v)}
 		widthRequest={1540}

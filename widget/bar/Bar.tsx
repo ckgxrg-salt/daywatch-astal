@@ -9,7 +9,7 @@ import { Clock, Bat } from "./Status";
 
 import { focused } from "../../app";
 
-export default function Bar(monitor: number) {
+export default function Bar() {
 	const { TOP, LEFT, BOTTOM } = Astal.WindowAnchor;
 
 	return <window
@@ -18,7 +18,7 @@ export default function Bar(monitor: number) {
 		name="astal-bar"
 		namespace="astal-bar"
 		layer={Astal.Layer.TOP}
-		monitor={monitor}
+		monitor={0}
 		exclusivity={Astal.Exclusivity.EXCLUSIVE}
 		anchor={TOP | LEFT | BOTTOM}
 		visible={bind(focused)}
