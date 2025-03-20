@@ -5,7 +5,7 @@
   margin: 10px 10px 10px 10px;
   background-color: color.change(p.$green, $alpha: 0.5);
   border: solid color.change(p.$green, $alpha: 0.7) 10px;
-  border-radius: 3px;
+  border-radius: 12px;
 
   label {
     margin: 0 0 0 8px;
@@ -16,7 +16,7 @@
   margin: 10px 10px 10px 10px;
   background-color: color.change(p.$green-gray, $alpha: 0.5);
   border: solid color.change(p.$green-gray, $alpha: 0.7) 10px;
-  border-radius: 3px;
+  border-radius: 12px;
 
   circularprogress {
     font-size: 5px;

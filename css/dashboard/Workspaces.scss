@@ -4,6 +4,7 @@
 .Workspaces {
   margin: 10px 10px 10px 10px;
   background-color: color.change(p.$light-gray-2, $alpha: 0.7);
+  border-radius: 12px;
 
   button {
     all: unset;
@@ -21,7 +22,7 @@
     transition: 200ms;
     padding: 0 8px;
     margin: 2px;
-    border-radius: 3px;
+    border-radius: 12px;
     border: 1pt solid transparent;
   }
 

@@ -6,7 +6,7 @@
     margin: 10px 0 10px 10px;
     background-color: color.change(p.$dark-gray-2, $alpha: 0.5);
     border: solid color.change(p.$dark-gray-2, $alpha: 0.7) 5px;
-    border-radius: 3px;
+    border-radius: 12px;
 
     button {
       all: unset;
@@ -20,7 +20,7 @@
     padding-left: 10px;
     background-color: color.change(p.$yellow, $alpha: 0.5);
     border: solid color.change(p.$yellow, $alpha: 0.7) 5px;
-    border-radius: 3px;
+    border-radius: 12px;
 
     button {
       all: unset;

@@ -4,7 +4,7 @@
 .QuoteContainer {
   background-color: color.change(p.$blue, $alpha: 0.5);
   border: solid color.change(p.$blue, $alpha: 0.7) 10px;
-  border-radius: 3px;
+  border-radius: 12px;
 
   .Refresh {
     all: unset;
