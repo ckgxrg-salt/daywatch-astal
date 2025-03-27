@@ -32,7 +32,7 @@ function Power() {
 		widthRequest={150}
 		heightRequest={150}
 		onClicked={() => {
-			execAsync("uwsm app -- wlogout");
+			execAsync("uwsm app -- astal-logout");
 		}}
 	>
 		<icon icon="gtk-goto-last-ltr" />

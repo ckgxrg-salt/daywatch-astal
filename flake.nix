@@ -25,7 +25,11 @@
       };
     in
     {
-      packages.${system}.default = import ./package.nix { inherit pkgs ags; };
+      packages.${system} = rec {
+        default = daywatch-astal;
+        daywatch-astal = import ./package.nix { inherit pkgs ags; };
+        logout = import ./package-logout.nix { inherit pkgs ags; };
+      };
 
       devShells.${system}.default = pkgs.mkShell {
         name = "astal-dev";

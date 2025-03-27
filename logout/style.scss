@@ -1,0 +1,68 @@
+@use "../css/palette" as p;
+@use "sass:color";
+
+.Logout {
+  background-color: color.change(p.$light-gray-1, $alpha: 0.5);
+}
+
+.LogoutCover {
+  background-color: color.change(p.$light-gray-1, $alpha: 0.5);
+}
+
+.MenuContainer {
+  border-bottom: solid color.change(p.$black, $alpha: 0.9) 5px;
+}
+
+button {
+  all: unset;
+  background-color: color.change(p.$dark-gray-1, $alpha: 0.7);
+  border: solid color.change(p.$light-gray-1, $alpha: 0.7) 10px;
+  border-radius: 12px;
+  font-size: 96px;
+  margin: 70px 10px 10px 10px;
+  transition-duration: 0.3s;
+}
+
+.FocusedAction {
+  font-size: 28px;
+}
+
+.ShutdownConfirm {
+  min-width: 250px;
+  margin-top: 10px;
+  background-color: color.change(p.$red, $alpha: 0.7);
+  border: solid color.change(p.$red, $alpha: 0.9) 10px;
+  font-size: 128px;
+}
+
+.RebootConfirm {
+  min-width: 250px;
+  margin-top: 10px;
+  background-color: color.change(p.$yellow, $alpha: 0.7);
+  border: solid color.change(p.$yellow, $alpha: 0.9) 10px;
+  font-size: 128px;
+}
+
+.LockConfirm {
+  min-width: 250px;
+  margin-top: 10px;
+  background-color: color.change(p.$green, $alpha: 0.7);
+  border: solid color.change(p.$green, $alpha: 0.9) 10px;
+  font-size: 128px;
+}
+
+.LGoutConfirm {
+  min-width: 250px;
+  margin-top: 10px;
+  background-color: color.change(p.$purple, $alpha: 0.7);
+  border: solid color.change(p.$purple, $alpha: 0.9) 10px;
+  font-size: 128px;
+}
+
+.SuspendConfirm {
+  min-width: 250px;
+  margin-top: 10px;
+  background-color: color.change(p.$blue, $alpha: 0.7);
+  border: solid color.change(p.$blue, $alpha: 0.9) 10px;
+  font-size: 128px;
+}

@@ -54,5 +54,5 @@ export default function Dashboard() {
 				<Status />
 			</box>
 		</box>
-	</window >;
+	</window>;
 }
