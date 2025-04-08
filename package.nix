@@ -18,5 +18,6 @@ ags.lib.bundle {
     mpris
     wireplumber
     battery
+    pkgs.libgtop
   ];
 }
