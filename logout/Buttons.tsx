@@ -1,6 +1,8 @@
-import { exec, Variable, bind } from "astal";
+import { Variable, bind } from "astal";
 import { Gtk, App } from "astal/gtk3";
+import Hyprland from "gi://AstalHyprland";
 
+const hypr = Hyprland.get_default();
 export default function Buttons() {
 	return <box
 		vertical
@@ -21,7 +23,7 @@ export default function Buttons() {
 	</box>;
 }
 
-const confirm = Variable("");
+export const confirm = Variable("");
 function mapClassname(orig: string, conf: string) {
 	if (conf == orig.toLowerCase()) {
 		return orig + "Confirm";
@@ -53,7 +55,8 @@ function Shutdown() {
 		heightRequest={250}
 		onClicked={() => {
 			if (confirm.get() === "shutdown") {
-				exec(["hyprctl", "dispatch", "exec", "systemctl poweroff"]);
+				hypr.dispatch("exec", "systemctl poweroff");
+				App.quit();
 			}
 			confirm.set("shutdown");
 		}}
@@ -69,7 +72,7 @@ function Reboot() {
 		heightRequest={250}
 		onClicked={() => {
 			if (confirm.get() === "reboot") {
-				exec(["hyprctl", "dispatch", "exec", "systemctl reboot"]);
+				hypr.dispatch("exec", "systemctl reboot");
 				App.quit();
 			}
 			confirm.set("reboot");
@@ -86,7 +89,7 @@ function Lock() {
 		heightRequest={250}
 		onClicked={() => {
 			if (confirm.get() === "lock") {
-				exec(["hyprctl", "dispatch", "exec", "bash -c 'pidof hyprlock || hyprlock --immediate'"]);
+				hypr.dispatch("exec", "bash -c 'pidof hyprlock || hyprlock --immediate'");
 				App.quit();
 			}
 			confirm.set("lock");
@@ -103,7 +106,7 @@ function Logout() {
 		heightRequest={250}
 		onClicked={() => {
 			if (confirm.get() === "lgout") {
-				exec(["hyprctl", "dispatch", "exec", "uwsm stop"]);
+				hypr.dispatch("exec", "uwsm stop");
 				App.quit();
 			}
 			confirm.set("lgout");
@@ -120,7 +123,7 @@ function Suspend() {
 		heightRequest={250}
 		onClicked={() => {
 			if (confirm.get() === "suspend") {
-				exec(["hyprctl", "dispatch", "exec", "systemctl suspend"]);
+				hypr.dispatch("exec", "systemctl suspend");
 				App.quit();
 			}
 			confirm.set("suspend");

@@ -2,7 +2,7 @@
 import Hyprland from "gi://AstalHyprland";
 import { exec } from "astal";
 
-import Dashboard from "../widget/dashboard/Dashboard";
+import Dashboard from "../dashboard/Dashboard";
 import { focused } from "../app";
 
 const hypr = Hyprland.get_default();
