@@ -6,6 +6,10 @@
   border: solid color.change(p.$blue, $alpha: 0.7) 10px;
   border-radius: 12px;
 
+  label {
+    font-size: 20px;
+  }
+
   .Refresh {
     all: unset;
   }

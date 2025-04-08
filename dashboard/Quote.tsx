@@ -1,5 +1,6 @@
 import { bind, exec, Variable } from "astal";
 import { Gtk } from "astal/gtk3";
+import Pango from "gi://Pango?version=1.0";
 
 const quote = Variable("");
 
@@ -17,8 +18,9 @@ export default function Quote() {
 			halign={Gtk.Align.CENTER}
 			truncate
 			wrap
+			wrapMode={Pango.WrapMode.CHAR}
 			maxWidthChars={55}
-			label={bind(quote).as(content => getMaxContent(content))}
+			label={bind(quote).as(content => removeLeadingComma(getMaxContent(content)))}
 			tooltipText={bind(quote)}
 		/>
 		<button
@@ -30,7 +32,7 @@ export default function Quote() {
 				quote.set(exec("fortune"));
 			}}
 		>
-			<icon icon="btsync-gui-10" />
+			<icon icon="dialog-information" />
 		</button>
 	</box>;
 }
@@ -38,8 +40,13 @@ export default function Quote() {
 function getMaxContent(str: string) {
 	let lines = str.split("\n");
 	if (lines.length > 4) {
-		return lines.slice(0, 3).map(each => each + "\n").toString() + "...";
+		return lines.slice(0, 3).map(each => each + "\n").toString() + lines.at(4) + "...";
 	} else {
 		return str;
 	}
+}
+
+// Strange Pango behaviour
+function removeLeadingComma(str: string) {
+	return str.replaceAll("\n,", "\n");
 }
