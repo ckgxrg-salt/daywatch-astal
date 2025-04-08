@@ -2,7 +2,7 @@ import { Gtk } from "astal/gtk3";
 import Mpris from "gi://AstalMpris";
 import { bind } from "astal";
 
-import { activePlayer, nextPlayer, prevPlayer, mapPlayers, lengthStr } from "../../util/mpris";
+import { activePlayer, nextPlayer, prevPlayer, mapPlayers, lengthStr } from "../util/mpris";
 
 export default function Media() {
 	return <box

@@ -7,7 +7,7 @@ import Media from "./Media";
 import Sliders from "./Sliders";
 import { Clock, Bat } from "./Status";
 
-import { focused } from "../../app";
+import { focused } from "../app";
 
 export default function Bar() {
 	const { TOP, LEFT, BOTTOM } = Astal.WindowAnchor;

@@ -1,7 +1,7 @@
 import { bind, Variable, execAsync } from "astal";
 import Tray from "gi://AstalTray";
 
-import { switchFocus } from "../../util/hyprland";
+import { switchFocus } from "../util/hyprland";
 
 const mem = Variable(0).poll(5000, ["bash", "-c", "printf \"%.0f\\n\" $(free -m | grep Mem | awk '{print ($3 / $2 ) * 100}')"], (out) => parseInt(out));
 

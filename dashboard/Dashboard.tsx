@@ -10,8 +10,8 @@ import Sliders from "./Sliders";
 import Status from "./Status";
 import Workspaces from "./Workspaces";
 
-import { switchFocus } from "../../util/hyprland";
-import { focused } from "../../app";
+import { switchFocus } from "../util/hyprland";
+import { focused } from "../app";
 
 export default function Dashboard() {
 	return <window

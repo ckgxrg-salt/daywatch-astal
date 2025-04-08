@@ -44,6 +44,7 @@
               mpris
               wireplumber
               battery
+              pkgs.libgtop
             ];
           })
           hyprland

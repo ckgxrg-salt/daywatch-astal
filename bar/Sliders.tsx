@@ -1,5 +1,5 @@
 import Wp from "gi://AstalWp";
-import Brightness from "../../util/brightness";
+import Brightness from "../util/brightness";
 import { bind, Variable } from "astal";
 import { Gtk } from "astal/gtk3";
 

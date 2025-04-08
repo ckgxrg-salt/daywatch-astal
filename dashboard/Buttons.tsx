@@ -1,7 +1,7 @@
 import { Astal } from "astal/gtk3";
 import { execAsync } from "astal";
 
-import { coffeeState } from "../../app";
+import { coffeeState } from "../app";
 
 export default function Buttons() {
 	return <box vertical className="Buttons">

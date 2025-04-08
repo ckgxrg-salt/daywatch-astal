@@ -1,8 +1,8 @@
 import { Astal } from "astal/gtk3";
 import { exec } from "astal";
 
-import { coffeeState, focused } from "../../app";
-import { sendBack } from "../../util/hyprland";
+import { coffeeState, focused } from "../app";
+import { sendBack } from "../util/hyprland";
 
 export function Return() {
 	return <button

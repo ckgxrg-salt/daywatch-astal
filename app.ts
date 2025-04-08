@@ -1,9 +1,9 @@
 import { App } from "astal/gtk3";
 import { Variable } from "astal";
 
-import Dashboard from "./widget/dashboard/Dashboard";
-import Bar from "./widget/bar/Bar";
-import Inhibitor from "./widget/Inhibitor";
+import Dashboard from "./dashboard/Dashboard";
+import Bar from "./bar/Bar";
+import Inhibitor from "./dashboard/Inhibitor";
 import { hyprInit } from "./util/hyprland";
 import { mprisInit } from "./util/mpris";
 
