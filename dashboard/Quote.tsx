@@ -1,6 +1,6 @@
 import { bind, exec, Variable } from "astal";
 import { Gtk } from "astal/gtk3";
-import Pango from "gi://Pango?version=1.0";
+import Pango from "gi://Pango";
 
 const quote = Variable("");
 
