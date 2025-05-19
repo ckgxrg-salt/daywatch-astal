@@ -18,7 +18,7 @@ function Apps() {
 		widthRequest={150}
 		heightRequest={150}
 		onClicked={() => {
-			execAsync("uwsm app -- rofi -show drun");
+			execAsync("rofi -show drun");
 		}}
 	>
 		<icon icon="activities" />
@@ -32,7 +32,7 @@ function Power() {
 		widthRequest={150}
 		heightRequest={150}
 		onClicked={() => {
-			execAsync("uwsm app -- astal-logout");
+			execAsync("astal-logout");
 		}}
 	>
 		<icon icon="gtk-goto-last-ltr" />

@@ -106,7 +106,7 @@ function Logout() {
 		heightRequest={250}
 		onClicked={() => {
 			if (confirm.get() === "lgout") {
-				hypr.dispatch("exec", "uwsm stop");
+				hypr.dispatch("exit", "");
 				App.quit();
 			}
 			confirm.set("lgout");

@@ -71,7 +71,7 @@ function handleKeybind(keycode: number) {
 		}
 		case Gdk.KEY_e: {
 			if (confirm.get() === "lgout") {
-				hypr.dispatch("exec", "uwsm stop");
+				hypr.dispatch("exit", "");
 				App.quit();
 			}
 			confirm.set("lgout");

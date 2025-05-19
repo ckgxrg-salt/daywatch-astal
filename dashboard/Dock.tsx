@@ -1,8 +1,10 @@
 import { bind, Variable, execAsync } from "astal";
 import Tray from "gi://AstalTray";
 import GTop from "gi://GTop";
+import Hyprland from "gi://AstalHyprland";
 
 import { switchFocus } from "../util/hyprland";
+const hypr = Hyprland.get_default();
 
 export default function Dock() {
 	return <box
@@ -65,7 +67,7 @@ function Cpu() {
 		<button
 			onClicked={() => {
 				switchFocus();
-				execAsync("uwsm app -- alacritty -e btop");
+				hypr.dispatch("exec", "alacritty -e btop");
 			}}
 		>
 			{bind(cpu).as(c => `${Math.round(c.load * 100)}%`)}
@@ -89,7 +91,7 @@ function Memory() {
 		<button
 			onClicked={() => {
 				switchFocus();
-				execAsync("uwsm app -- alacritty -e btop");
+				hypr.dispatch("exec", "alacritty -e btop");
 			}}
 		>
 			{bind(mem).as(m => `${Math.round(m.user / m.total * 100)}%`)}
